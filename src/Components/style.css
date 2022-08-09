@@ -1,0 +1,82 @@
+
+nav a{
+    color: #0a66c2;
+    text-decoration: none;
+    padding: 1.5vh 3vh;
+}
+nav a:hover{
+    background-color: rgb(197, 197, 197);
+    padding: 1.5vh 3vh;
+    border: 1px solid #b4b4b4;
+    border-radius: 5vh;
+}
+#login:hover{
+    background-color: #d4eaff;
+}
+#logo:hover{
+    background-color: white;
+    border: none;
+}
+
+/* Main Section */
+
+#mainContainer{
+    width: 100%;
+    display: flex;
+    flex-wrap: nowrap;
+    flex: 50%;
+    padding: 4vh 7vh;
+}
+#mainContainer img{
+    width: 100%;
+    height: 80vh;
+    border-radius: 1vh;
+    box-shadow: inset 7px -8px 129px -52px rgba(0,0,0,0.8);
+}
+#cards{
+    margin-top: 5vh;
+}
+#cards div{
+    width: 80%;
+    padding: 3vh;
+    margin-top: 3vh;
+    border: 1px solid rgb(199, 190, 190);
+    font-size: 4vh;
+    font-family: 'Roboto', sans-serif;
+    font-weight: 200;
+    border-radius: 1vh;
+    cursor: pointer;
+    display: flex;
+    justify-content: space-between;
+
+}
+#cards div:hover{
+    transform: scale(1.03);
+    box-shadow: 7px 18px 63px -13px rgba(0,0,0,0.75);
+}
+
+/* Sign Container */
+
+#signContainer{
+    width: 95%;
+    height: 100vh;
+    margin: auto;
+    padding: 5vh 1vh;
+  
+}
+#signFormContainer{
+    width: 50%;
+    margin: auto;
+    margin-top: 2vh;
+    height: 75vh;
+    padding: 3vh;
+    border-radius: 2vh;
+    font-size: 4vh;
+    box-shadow: -1px 12px 24px -5px rgba(0,0,0,1);
+}
+#signContainer input{
+    width: 95%;
+    font-size: 3vh;
+    border-radius: 1vh;
+    padding: 1vh;
+}
