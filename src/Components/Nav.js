@@ -8,7 +8,7 @@ const Nav = () => {
       <nav style={nav}>
         <NavLink to='/' style={{marginRight:"35%",fontWeight:"700",fontSize:"5vh"}} id="logo">Connect <span style={{ backgroundColor:"#0a66c2",color:"white",padding:".2vh .5vh",borderRadius:"1vh" }}>ing</span></NavLink>
         <NavLink to='/login'> Sign In </NavLink>
-        <NavLink to='/signup' style={{padding:"1.5vh 3vh",border:"1px solid #0a66c2",borderRadius:"5vh"}} id="signup">Join now</NavLink>
+        <NavLink to='/signup' style={{padding:"1.5vh 3vh",border:".2vh solid #0a66c2",borderRadius:"5vh"}} id="signup">Join now</NavLink>
       </nav>
     </>
   )

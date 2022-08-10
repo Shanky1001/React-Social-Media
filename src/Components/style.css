@@ -7,10 +7,10 @@ nav a{
 nav a:hover{
     background-color: rgb(197, 197, 197);
     padding: 1.5vh 3vh;
-    border: 1px solid #b4b4b4;
+    border: .2vh solid #b4b4b4;
     border-radius: 5vh;
 }
-#login:hover{
+#signup:hover{
     background-color: #d4eaff;
 }
 #logo:hover{
@@ -26,6 +26,7 @@ nav a:hover{
     flex-wrap: nowrap;
     flex: 50%;
     padding: 4vh 7vh;
+    max-height: 70vh;
 }
 #mainContainer img{
     width: 100%;
@@ -40,10 +41,10 @@ nav a:hover{
     width: 80%;
     padding: 3vh;
     margin-top: 3vh;
-    border: 1px solid rgb(199, 190, 190);
+    border: .2vh solid rgb(199, 190, 190);
     font-size: 4vh;
     font-family: 'Roboto', sans-serif;
-    font-weight: 200;
+    font-weight: 100;
     border-radius: 1vh;
     cursor: pointer;
     display: flex;
@@ -58,25 +59,42 @@ nav a:hover{
 /* Sign Container */
 
 #signContainer{
-    width: 95%;
-    height: 100vh;
-    margin: auto;
-    padding: 5vh 1vh;
-  
+    width: 80vw;
+    height: 95vh;
+    max-height: 100vh;
+    margin: 1vw 5vw;
+    padding: .1vh;
 }
 #signFormContainer{
-    width: 50%;
-    margin: auto;
-    margin-top: 2vh;
-    height: 75vh;
+    width: 40vw;
+    margin: 0vh 20vw;
+    height: fit-content;
+    max-height: 91.5vh;
     padding: 3vh;
     border-radius: 2vh;
     font-size: 4vh;
     box-shadow: -1px 12px 24px -5px rgba(0,0,0,1);
+    background-color: antiquewhite;
 }
 #signContainer input{
     width: 95%;
     font-size: 3vh;
     border-radius: 1vh;
     padding: 1vh;
+    border: .1vh solid black;
 }
+#loginFormContainer{
+    width: 40vw;
+    margin: 1vh 20vw;
+    height: 75vh;
+    padding: 3vh;
+    border-radius: 2vh;
+    font-size: 4vh;
+    box-shadow: -1px 12px 24px -5px rgba(0,0,0,1);
+    background-color: antiquewhite;
+}
+
+
+/* Feeds Section */
+
+
