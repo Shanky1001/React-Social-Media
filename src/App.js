@@ -7,18 +7,19 @@ import Main from './Components/Main'
 import Feed from './Components/Feed'
 import Login from './Components/Login';
 import SignUp from './Components/Sign';
-
+import friend from './Components/feeds.json'
 
 
 export const user = createContext();
 function App() {
 
   const [details, setDetails] = useState([]);
+  var [friends, setFriends] = useState(friend)
 
   return (
     <>
-      <user.Provider value={[details,setDetails]}>
-        <div id='container' style={{ width: "80%", margin: "auto" }}>
+      <user.Provider value={{details:[details, setDetails],feed:[friends, setFriends]}}>
+        <div id='container' style={{ width: "90%", margin: "auto" }}>
           <Router>
             <Routes>
               <Route path='/' element={<><Nav /> <Main /></>} />

@@ -97,4 +97,47 @@ nav a:hover{
 
 /* Feeds Section */
 
+#navFeed{
+    width: 100%;
+    margin: 2vh auto;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding-bottom: 1vh;
+}
+#navFeed div{
+    margin-top: 2vh;
+    font-size: 3vh;
+    text-align: center;
+    cursor: pointer;
+    opacity: .7;
+    margin: 0;
+    padding: 0;
+}
+#navFeed div:hover{
+   opacity: 1;
+}
+
+#navFeed div .fa-solid{
+    font-size: 4vh;
+    margin: 0;
+    padding: 0;
+}
+#mainFeedContainer{
+    display: flex;
+    justify-content: space-between;
+    height: 87vh;
+}
+#navFriends{
+    width: 30%;
+    border: 1px solid;
+}
+#navFeedDisplay{
+    width: 65%;
+    border: 1px solid;
+}
+#navFriends .fa-circle-dot{
+    display: inline;
+    color:green;
+}
 

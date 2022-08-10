@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "friendName": "Rahul",
+    "postID": 1,
+    "postTitle": "LOL Binod !",
+    "PostImg": "../Images/binod.jpeg",
+    "likes": 2,
+    "comments": {
+      "Rajat": "Hahaha true.",
+      "Harsh": "True"
+    }
+  },
+  {
+    "id": 2,
+    "friendName": "Rajat",
+    "postID": 1,
+    "postTitle": "LOL Binod !",
+    "PostImg": "../Images/motivation.jpeg",
+    "likes": 3,
+    "comments": {
+      "Rahul": "true.",
+      "Harsh": "True"
+    }
+  }
+]

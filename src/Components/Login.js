@@ -20,8 +20,9 @@ const Login = () => {
     }
     else {
       document.querySelector("#warning").style = "display:none";
-      detail[0].forEach((val) => {
-        if ((val.email).toLowerCase() === email.toLowerCase() && val.password === password && (val.uname).toLowerCase() === uname.toLowerCase()) {
+      detail.details[0].forEach((val) => {
+        console.log(val);
+        if ((val.email).toUpperCase() === email.toUpperCase() && (val.password).toUpperCase() === password.toUpperCase() && (val.username).toUpperCase() === uname.toUpperCase()) {
           navigate('/feed');
           flag = false;
         }

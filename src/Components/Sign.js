@@ -28,7 +28,8 @@ const Sign = () => {
     else {
       document.querySelector("#warning").style = "display:none";
       const obj = { "email": email, "password": password, "username": uname, "name": name, "number": number };
-      detail[1]([...detail[0], obj]);
+      detail.details[1]([...detail.details[0], obj]);
+      console.log(detail.details[0]);
       navigate('/login');
       document.querySelector("#email").value = "";
       document.querySelector("#password").value = "";
