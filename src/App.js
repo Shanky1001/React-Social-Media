@@ -1,37 +1,56 @@
 
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState, createContext } from 'react';
+import { useState, createContext, useContext } from 'react';
 import Nav from "./Components/Nav"
 import Main from './Components/Main'
 import Feed from './Components/Feed'
 import Login from './Components/Login';
 import SignUp from './Components/Sign';
-import friend from './Components/feeds.json'
+import feed from './Components/Assets/feeds.json';
+import people from './Components/Assets/users.json'
+import { createTheme, ThemeProvider } from '@mui/material';
+import { Box } from '@mui/system';
 
 
 export const user = createContext();
+
 function App() {
 
-  const [details, setDetails] = useState([]);
-  var [friends, setFriends] = useState(friend)
+  const [details, setDetails] = useState(feed);
+  const [users, setUsers] = useState(people);
 
+  const [mode, setMode] = useState("light");
+  const darkTheme = createTheme({
+    palette: {
+      mode: mode,
+    },
+  });
+
+  const [logger, setLogger] = useState({ id: 1, name: "Rahul" });
   return (
     <>
-      <user.Provider value={{details:[details, setDetails],feed:[friends, setFriends]}}>
-        <div id='container' style={{ width: "90%", margin: "auto" }}>
-          <Router>
-            <Routes>
-              <Route path='/' element={<><Nav /> <Main /></>} />
-              <Route path='/feed' element={<Feed />} />
-              <Route path='/login' element={<Login />} />
-              <Route path='/signup' element={<SignUp />} />
-            </Routes>
-          </Router>
-        </div>
-      </user.Provider>
+      <ThemeProvider theme={darkTheme}>
+        <user.Provider value={{ details, setDetails, users, setUsers, setMode, mode, logger, setLogger }}>
+          <Box id='container' >
+            <Router>
+              <Routes>
+                <Route path='/' element={<><Nav /> <Main /></>} />
+                <Route path='/feed' element={<Feed />} />
+                <Route path='/login' element={<Login />} />
+                <Route path='/signup' element={<SignUp />} />
+              </Routes>
+            </Router>
+          </Box>
+        </user.Provider>
+      </ThemeProvider>
     </>
   );
 }
 
 export default App;
+
+export const Context = () => {
+  return useContext(user)
+}
+
