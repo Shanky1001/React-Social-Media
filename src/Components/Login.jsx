@@ -3,7 +3,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { Context } from '../App';
 
 const Login = () => {
-  const { users } = Context();
+  const { users, setLogger } = Context();
   const navigate = useNavigate();
 
   var validRegex = /^[a-zA-Z0-9.!#$%&'*+/=?^_`{|}~-]+@[a-zA-Z0-9-]+(?:\.[a-zA-Z0-9-]+)*$/;
@@ -24,6 +24,7 @@ const Login = () => {
       document.querySelector("#warning").style = "display:none";
       users.forEach((val) => {
         if ((val.email).toUpperCase() === email.toUpperCase() && (val.pass).toUpperCase() === password.toUpperCase() && (val.name).toUpperCase() === uname.toUpperCase()) {
+          setLogger({ id: val.id, name: val.name })
           navigate('/feed');
           flag = false;
         }

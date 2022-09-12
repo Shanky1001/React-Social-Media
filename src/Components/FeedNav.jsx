@@ -1,9 +1,10 @@
 import styled from '@emotion/styled'
-import { Mail, Notifications } from '@mui/icons-material';
+import { Logout, Mail, Notifications } from '@mui/icons-material';
 import { AppBar, Avatar, Badge, InputBase, Toolbar, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, useNavigate } from 'react-router-dom'
+import { Context } from '../App';
 
 const StyledToolBar = styled(Toolbar)({
   display: "flex", justifyContent: "space-between"
@@ -29,7 +30,15 @@ const UserBox = styled(Box)(({ theme }) => ({
     display: "none",
   },
 }));
+
+
 const FeedNav = () => {
+  const navigate = useNavigate();
+  const {setLogger} = Context();
+  const logout = ()=>{
+    navigate('/')
+    setLogger({})
+  }
 
   return (
     <AppBar position="sticky" >
@@ -47,10 +56,11 @@ const FeedNav = () => {
         </Typography>
 
         {/* Seachbar */}
-        <Search><InputBase placeholder='search' /></Search>
+        <Search><InputBase placeholder='search' fullWidth /></Search>
 
         {/* Side Icons */}
         <Icons>
+          <Logout color="action" sx={{ cursor: "pointer" }} onClick={logout} />
           <Badge badgeContent={4} color="error" sx={{ cursor: "pointer" }}>
             < Mail color="action" />
           </Badge>

@@ -35,16 +35,16 @@
     "comments": [{ "Shashank": "Hola !!"},{ "Harsh": "Banjour" }]
   },{
     "id": 5,
-    "by": "Shashank",
-    "byID": 1,
+    "by": "Harsh",
+    "byID": 2,
     "postTitle": "Hello All",
     "postIMG": "https://www.bhaktiphotos.com/wp-content/uploads/2018/04/Hindu-Shiva-God-Wallpaper-Free-Download.jpg",
     "likes": 5,
     "comments": [{ "Rahul": "Hola !!"},{ "Harsh": "Banjour" }]
   },{
     "id": 6,
-    "by": "Shashank",
-    "byID": 1,
+    "by": "Rajat",
+    "byID": 4,
     "postTitle": "Hello All",
     "postIMG": "http://webmeup.com/upload/blog/lead-image-105.png",
     "likes": 5,
@@ -59,8 +59,8 @@
     "comments": [{ "Rahul": "Hola !!"},{ "Harsh": "Banjour" }]
   },{
     "id": 8,
-    "by": "Shashank",
-    "byID": 1,
+    "by": "Rahul",
+    "byID": 3,
     "postTitle": "Hello All",
     "postIMG": "https://t4.ftcdn.net/jpg/02/98/00/47/360_F_298004771_mtf8mWsEGiUBqqTyRCNTmEsDZdKMty1V.jpg",
     "likes": 5,

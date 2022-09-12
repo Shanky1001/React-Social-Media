@@ -87,7 +87,7 @@ const FeedsCard = ({ val }) => {
                         </Tippy>}
                     </IconButton>
                 }
-                title={val.by}
+                title={val.by === logger.name ? "You" : val.by}
             />
             <CardMedia component="img" height="20%" image={val.postIMG} alt={val.postTitle} />
             <CardContent>

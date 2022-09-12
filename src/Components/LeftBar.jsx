@@ -1,12 +1,12 @@
 import { AccountBox, Description, Group, Home, Message, PeopleAlt, Settings, } from '@mui/icons-material'
 import { Box, List, ListItem, ListItemButton, ListItemIcon, ListItemText } from '@mui/material'
-import React from 'react'
+import React from 'react';
 
 const LeftBar = () => {
   return (
     <Box flex={1} p={2} alignItems="center" justifyContent="space-between" sx={{ display: { xs: "none", sm: "block" } }}>
-      <Box position={'fixed'} paddingTop={8} sx={{width:"15%"}} >
-        <nav aria-label="main mailbox folders">
+      <Box position={'fixed'} paddingTop={10} sx={{ width: "15%" }} >
+        <nav >
           <List>
             <ListItem disablePadding>
               <ListItemButton>
