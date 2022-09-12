@@ -1,9 +1,8 @@
 import styled from '@emotion/styled'
 import { Mail, Notifications } from '@mui/icons-material';
-import { AppBar, Avatar, Badge, InputBase, Menu, MenuItem, Toolbar, Typography } from '@mui/material'
+import { AppBar, Avatar, Badge, InputBase, Toolbar, Typography } from '@mui/material'
 import { Box } from '@mui/system';
 import React from 'react'
-import { useState } from 'react';
 import { Link } from 'react-router-dom'
 
 const StyledToolBar = styled(Toolbar)({
@@ -58,7 +57,7 @@ const FeedNav = () => {
           <Badge badgeContent={4} color="error" sx={{ cursor: "pointer" }}>
             <  Notifications color="action" />
           </Badge>
-          <Avatar src='https://image.shutterstock.com/image-photo/young-handsome-man-beard-wearing-260nw-1768126784.jpg' sx={{ width: 30, height: 30, cursor: "pointer" }}  />
+          <Avatar src='https://image.shutterstock.com/image-photo/young-handsome-man-beard-wearing-260nw-1768126784.jpg' sx={{ width: 30, height: 30, cursor: "pointer" }} />
         </Icons>
         <UserBox >
           <Avatar src='https://image.shutterstock.com/image-photo/young-handsome-man-beard-wearing-260nw-1768126784.jpg' sx={{ width: 30, height: 30, cursor: "pointer" }} /> <Typography variant='span'> Shanky</Typography>

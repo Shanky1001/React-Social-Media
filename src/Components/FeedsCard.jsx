@@ -1,4 +1,4 @@
-import {  ExpandLess, ExpandMore,  MoreVert, Share } from '@mui/icons-material'
+import { ExpandLess, ExpandMore, MoreVert, Share } from '@mui/icons-material'
 import { Avatar, Card, CardActions, CardContent, CardHeader, CardMedia, Collapse, IconButton, List, ListItem, ListItemButton, ListItemText, TextField, Typography } from '@mui/material'
 import Tippy from '@tippyjs/react'
 import React, { useState } from 'react'
@@ -7,7 +7,7 @@ import 'tippy.js/dist/tippy.css';
 
 const FeedsCard = ({ val }) => {
     // Receiving Context
-    const { details, setDetails, logger, } = Context()
+    const { users, details, setDetails, logger, muted, setMuted } = Context()
 
     // State to open Collapse of card for comments
     const [colOpen, setColOpen] = useState(false);
@@ -68,11 +68,12 @@ const FeedsCard = ({ val }) => {
 
     // To mute specific persons post
     const muteThis = (e) => {
+        setMuted([...muted, ...users.filter((val2) => val2.id === val.byID)])
         setDetails(details.filter((val3) => val3.byID !== val.byID))
     }
 
     return (
-        <Card sx={{ Width: 500, marginTop: "2rem", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}>
+        <Card sx={{ Width: 450, marginTop: "2rem", boxShadow: "rgba(0, 0, 0, 0.35) 0px 5px 15px" }}>
             <CardHeader
                 avatar={
                     <Avatar >
@@ -81,9 +82,9 @@ const FeedsCard = ({ val }) => {
                 }
                 action={
                     <IconButton aria-label="settings">
-                        <Tippy content={<i className="fa-solid fa-volume-xmark" id={val.byID} style={{ fontSize: "1.2rem", color: "white" }} onClick={muteThis} />} interactive={true} interactiveBorder={500} delay={10} >
+                        {logger.name.toLowerCase() !== (val.by).toLowerCase() && <Tippy content={<i className="fa-solid fa-volume-xmark" id={val.byID} style={{ fontSize: "1.2rem", color: "white" }} onClick={muteThis} />} interactive={true} interactiveBorder={500} delay={10} >
                             <MoreVert />
-                        </Tippy>
+                        </Tippy>}
                     </IconButton>
                 }
                 title={val.by}
@@ -96,7 +97,7 @@ const FeedsCard = ({ val }) => {
             </CardContent>
             <CardActions disableSpacing>
                 <IconButton aria-label="Likes" onClick={like}>
-                    {liked ? <i class="fa-solid fa-heart" style={{ color: "red" }} /> : <i class="fa-solid fa-heart" style={{ color: "grey" }} />} {val.likes}
+                    {liked ? <i className="fa-solid fa-heart" style={{ color: "red" }} /> : <i className="fa-solid fa-heart" style={{ color: "grey" }} />} {val.likes}
                 </IconButton>
                 <IconButton aria-label="share">
                     <Share />

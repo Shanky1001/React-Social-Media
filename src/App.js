@@ -19,6 +19,7 @@ function App() {
 
   const [details, setDetails] = useState(feed);
   const [users, setUsers] = useState(people);
+  const [muted,setMuted] = useState([]);
 
   const [mode, setMode] = useState("light");
   const darkTheme = createTheme({
@@ -31,7 +32,7 @@ function App() {
   return (
     <>
       <ThemeProvider theme={darkTheme}>
-        <user.Provider value={{ details, setDetails, users, setUsers, setMode, mode, logger, setLogger }}>
+        <user.Provider value={{ details, setDetails, users, setUsers, setMode, mode, logger, setLogger,muted,setMuted }}>
           <Box id='container' >
             <Router>
               <Routes>

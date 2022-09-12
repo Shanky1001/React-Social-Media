@@ -5,6 +5,7 @@ import Feeds from "./Feeds";
 import RightBar from "./RightBar";
 import LeftBar from "./LeftBar";
 import { Stack } from "@mui/system";
+import AddPost from "./AddPost";
 
 const Feed = () => {
 
@@ -16,6 +17,7 @@ const Feed = () => {
         <Feeds />
         <RightBar />
       </Stack>
+      <AddPost />
     </Box>
   );
 };
