@@ -89,7 +89,7 @@ const FeedsCard = ({ val }) => {
                 }
                 title={val.by === logger.name ? "You" : val.by}
             />
-            <CardMedia component="img" height="20%" image={val.postIMG} alt={val.postTitle} />
+            {val.postIMG && <CardMedia component="img" height="20%" image={val.postIMG} alt={val.postTitle} />}
             <CardContent>
                 <Typography variant="h6" color="text.primary">
                     {val.by}: {val.postTitle}
