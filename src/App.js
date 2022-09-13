@@ -28,7 +28,7 @@ function App() {
     },
   });
 
-  const [logger, setLogger] = useState({id:1,name:"Shashank"});
+  const [logger, setLogger] = useState();
   return (
     <>
       <ThemeProvider theme={darkTheme}>
