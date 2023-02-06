@@ -1,16 +1,16 @@
-import { Avatar, AvatarGroup, Box, ImageList, ImageListItem, Typography } from '@mui/material'
-import React from 'react'
-import { Context } from '../App'
-import Tippy from '@tippyjs/react'
+import { Avatar, AvatarGroup, Box, ImageList, ImageListItem, Typography } from '@mui/material';
+import React from 'react';
+import { Context } from '../App';
+import Tippy from '@tippyjs/react';
 import 'tippy.js/dist/tippy.css';
-import feeds from './Assets/feeds.json'
+import feeds from './Assets/feeds.json';
 
 const RightBar = () => {
   const { details, setDetails, users, muted, setMuted } = Context();
 
   const unMute = () => {
     setDetails(feeds);
-    setMuted([])
+    setMuted([]);
   }
 
   return (
