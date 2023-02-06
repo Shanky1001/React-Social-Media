@@ -2,9 +2,9 @@
 import './App.css';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import { useState, createContext, useContext } from 'react';
-import Nav from "./Components/Nav"
-import Main from './Components/Main'
-import Feed from './Components/Feed'
+import Nav from "./Components/Nav";
+import Main from './Components/Main';
+import Feed from './Components/Feed';
 import Login from './Components/Login';
 import SignUp from './Components/Sign';
 import feed from './Components/Assets/feeds.json';
